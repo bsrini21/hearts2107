@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hearts 2107</title>
+    <link rel="stylesheet" href="style.css"> <!-- Make sure to load the updated style -->
+</head>
+<body>
+    <h1>Hearts 2107</h1>
+    
+    <div class="scoreboard">
+        <div class="score-box">
+            <h3>Score</h3>
+            <p id="score">0</p>
+        </div>
+        <div class="best-score-box">
+            <h3>Best Score</h3>
+            <p id="best-score">0</p>
+        </div>
+    </div>
+    
+    <div class="game-container">
+        <div id="grid-container">
+            <!-- Tiles will be dynamically generated here -->
+        </div>
+        <button onclick="restartGame()">Restart Game</button>
+    </div>
+
+    <div class="controls">
+        <button onclick="move('up')">⬆️</button><br>
+        <button onclick="move('left')">⬅️</button>
+        <button onclick="move('down')">⬇️</button>
+        <button onclick="move('right')">➡️</button>
+    </div>
+
+    <div class="instructions">
+        <h2>How to play:</h2>
+        <p>Use your arrow keys to move the tiles. When two tiles with the same symbol touch, they get promoted!</p>
+    </div>
+
+    <div id="game-over" class="game-over">
+        <h2>Game Over</h2>
+        <button onclick="restartGame()">Retry</button>
+    </div>
+
+    <div class="heart-levels">
+        <h2>Heart Levels</h2>
+        <div class="levels">
+            <div class="level"><span>❤️</span> (2)</div>
+            <div class="level"><span>💛</span> (4)</div>
+            <div class="level"><span>💚</span> (8)</div>
+            <div class="level"><span>💙</span> (16)</div>
+            <div class="level"><span>💜</span> (32)</div>
+            <div class="level"><span>🖤</span> (64)</div>
+            <div class="level"><span>💘</span> (128 - Heart with Arrow)</div>
+            <div class="level"><span>💝</span> (256 - Heart with Ribbon)</div>
+            <div class="level"><span>💕</span> (512 - Two Hearts)</div>
+            <div class="level"><span>🌈</span> (1024 - Rainbow Heart)</div>
+            <div class="level"><span>🦄</span> (2107 - Unicorn Heart)</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
