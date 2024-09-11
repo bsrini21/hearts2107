@@ -42,13 +42,13 @@ h1 {
     grid-gap: 10px;
     margin-bottom: 20px;
     width: 100%;
-    max-width: 400px; /* Limit max width to prevent overflow */
+    max-width: 400px;
 }
 
 /* Ensure tiles fit and adjust based on screen size */
 .tile {
     width: 100%;
-    padding-bottom: 100%; /* Makes the tile square by using aspect ratio trick */
+    height: 100px; /* Adjust this value if needed for smaller tiles */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -127,8 +127,10 @@ h1 {
         font-size: 1.5em;
     }
 
+    /* Tiles will shrink on smaller screens */
     .tile {
-        font-size: 1.5em; /* Smaller font size on smaller screens */
+        height: 80px; /* Smaller tiles on mobile */
+        font-size: 1.5em;
     }
 
     .controls button {
